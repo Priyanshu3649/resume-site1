@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <h1>My Resume</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item dropdown">
+                        </a>
+                        <div class="dpn">
+                            <button class="dpn-button">Sections</button>
+                            <div class="dpn-content">
+                                
+                                <a class="dpn-item" href="#skills">Skills</a>
+                                <a class="dpn-item" href="#achievements">Achievements</a>
+                                <a class="dpn-item" href="#hobbies">Hobbies</a>
+                                <a class="dpn-item" href="#education">Education</a>
+                                <a class="dpn-item" href="#experience">Experience</a>
+                                <a class="dpn-item" href="#certificates">Certificates</a>
+                                <a class="dpn-item" href="#contact">Contact</a>
+                            </div>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <section id="about" class="my-5">
+
+            <div class="col-md-6">
+                <img src="/photo.jpg" alt="Profile Photo" class="profile-photo img-fluid">
+                <div class="profile-card101">
+                    <h1 id="name"></h1>
+                    <p><span class="key">Email:</span> <span class="value" id="email"></span></p>
+                    <p><span class="key">Phone:</span> <span class="value" id="phone"></span></p>
+                    <p><span class="key">Address:</span> <span class="value" id="address"></span></p>
+                    <p><span class="key">Website:</span> <a href="#" id="website" class="value1 "></a></p>
+                </div>
+
+                <script>
+                    const profileData = {
+                        name: 'Priyanshu Pandey',
+                        email: 'pandeypriyanshu53@gmail.com',
+                        phone: '9313686893',
+                        address: 'H. no-151, Holambi Khurd, Delhi-110082',
+                        website: 'http://localhost:3000'  // Updated to a valid URL
+                    };
+
+                    // Populate the profile card with data
+                    document.getElementById('name').textContent = profileData.name;
+                    document.getElementById('email').textContent = profileData.email;
+                    document.getElementById('phone').textContent = profileData.phone;
+                    document.getElementById('address').textContent = profileData.address;
+                    document.getElementById('website').textContent = profileData.website;
+                    document.getElementById('website').href = profileData.website;
+                </script>
+            </div>
+            </div>
+        </section>
+
+        <section id="skills" class="dropdown-section my-5">
+            <h2 class="dropdown-title">Skills <span class="icon">&#9662;</span></h2>
+            <div class="dropdown-content">
+                <ul class="skills-list">
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>React</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+        </section>
+
+        <script>
+            document.querySelector('.dropdown-title').addEventListener('click', function () {
+                var content = document.querySelector('.dropdown-content');
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        </script>
+
+        <section id="achievements" class="dropdown-section my-5">
+            <h2 class="dropdown-title">Achievements <span class="icon">&#9662;</span></h2>
+            <div class="dropdown-content">
+                <ul>
+                    <li></li>
+                    <li>
+                        <div class="achievement">
+                            <span class="key">Year:</span> <span class="value">2020</span><br>
+                            <span class="key">Achievement:</span> <span class="value">Hackathlon 1st position</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="achievement">
+                            <span class="key">Year:</span> <span class="value">2021</span><br>
+                            <span class="key">Achievement:</span> <span class="value">Built an ISRO Event winning
+                                app</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="achievement">
+                            <span class="key">Year:</span> <span class="value">2022</span><br>
+                            <span class="key">Achievement:</span> <span class="value">Created a malware detection and
+                                removal app</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="achievement">
+                            <span class="key">Year:</span> <span class="value">2023</span><br>
+                            <span class="key">Achievement:</span> <span class="value">Got awarded for building a
+                                studying app via Coding</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="hobbies" class="dropdown-section my-5">
+            <h2 class="dropdown-title">Hobbies <span class="icon">&#9662;</span></h2>
+            <div class="dropdown-content">
+                <ul>
+                    <li>Football</li>
+                    <li>Cricket</li>
+                    <li>Chess</li>
+                    <li>App building</li>
+                    <li>Video Editting</li>
+                    <li>Listening Music</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="dropdown-section my-5">
+            <h2 class="dropdown-title">Experience <span class="icon">&#9662;</span></h2>
+            <div class="dropdown-content">
+                <ul>
+                    <li>
+                        <div class="card">
+                            <h2>Team Manager at Microsoft</h2>
+                            <div><span class="key">Job Title:</span> <span class="value">Team Manager</span></div>
+                            <div><span class="key">Company:</span> <span class="value">Microsoft</span></div>
+                            <div><span class="key">Duration:</span> <span class="value">Jan 2030 - Dec 2032</span></div>
+                            <div class="description">
+                                <span class="key">Description:</span> <span class="value">Leading a team of developers
+                                    to build scalable web applications using modern technologies.</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <h2>Software Engineer at Google</h2>
+                            <div><span class="key">Job Title:</span> <span class="value">Software Engineer</span></div>
+                            <div><span class="key">Company:</span> <span class="value">Google</span></div>
+                            <div><span class="key">Duration:</span> <span class="value">Jun 2028 - Dec 2030</span></div>
+                            <div class="description">
+                                <span class="key">Description:</span> <span class="value">Developed and maintained web
+                                    applications, improved system performance and user experience.</span>
+                            </div>
+                        </div>
+            </div>
+            </li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="education" class="dropdown-section my-5">
+            <h2 class="dropdown-title">Education <span class="icon">&#9662;</span></h2>
+            <div class="container">
+                <div class="dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="education-item">
+                                <h2 class="degree">Master of Technology in Data Science</h2>
+                                <p class="details">CGPA: 8.5</p>
+                                <p class="details">Institution: Indian Institute of Technology, Delhi</p>
+                                <p class="details">Year: 2030</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-item">
+                                <h2 class="degree">Bachelor of Technology in AI and DS</h2>
+                                <p class="details">CGPA: 9</p>
+                                <p class="details">Institution: University School of Automation and Research</p>
+                                <p class="details">Year: 2028</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-item">
+                                <h2 class="degree">Senior Secondary School Passing Certificate</h2>
+                                <p class="details">Percentage: 78.6%</p>
+                                <p class="details">Institution: The Mann School</p>
+                                <p class="details">Year: 2022</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-item">
+                                <h2 class="degree">Secondary School Passing Certificate</h2>
+                                <p class="details">Percentage: 93.8%</p>
+                                <p class="details">Institution: The Mann School</p>
+                                <p class="details">Year: 2020</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+
+        <section id="certificates" class="my-5">
+            <h2>Certificates</h2>
+            <div class="card-container">
+                <div class="card-body" data-target="popup1">
+                    <div class="card-image-placeholder">
+                        <img src="https://www.shutterstock.com/image-illustration/computer-certificate-format-design-institute-260nw-1892632018.jpg"
+                            alt="Certificate 1" class="card-image">
+                    </div>
+                    <h5 class="card-title">Comprehensive Skill Mastery:</h5>
+                </div>
+
+                <div class="card-body" data-target="popup2">
+                    <div class="card-image-placeholder">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNrUJE3IJAzKqGRc9N5rexCeLu3yK5RJ0URw&s"
+                            alt="Certificate 2" class="card-image">
+                    </div>
+                    <h5 class="card-title">Innovative Project Development:</h5>
+                </div>
+
+                <div class="card-body" data-target="popup3">
+                    <div class="card-image-placeholder">
+                        <img src="https://i.ytimg.com/vi/ehFmj69I0vk/maxresdefault.jpg" alt="Certificate 3"
+                            class="card-image">
+                    </div>
+                    <h5 class="card-title">Dedication to Continuous Learning:</h5>
+                </div>
+            </div>
+
+            <div class="overlay" id="overlay"></div>
+
+            <div class="popup" id="popup1">
+                <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+                <h5>Comprehensive Skill Mastery:</h5>
+                <p>"This certificate signifies the completion of a rigorous programming curriculum,
+                    covering essential languages and technologies such as JavaScript, Python, and Java. The recipient
+                    has demonstrated
+                    exceptional proficiency in developing dynamic
+                    web applications using frameworks like React and Node.js, showcasing their ability to solve complex
+                    problems and deliver robust solutions.".</p>
+            </div>
+
+            <div class="popup" id="popup2">
+                <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+                <h5>Innovative Project Development:</h5>
+                <p>"This certificate acknowledges the recipient's ability to create innovative projects. Through
+                    hands-on experience with HTML, CSS, JavaScript, and backend technologies, the recipient has
+                    developed advanced applications, optimized code for performance, and exhibited a strong
+                    understanding of modern software development practices.".</p>
+            </div>
+
+            <div class="popup" id="popup3">
+                <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
+                <h5>Dedication to Continuous Learning:</h5>
+                <p>"This programming certificate is a testament to the recipient's dedication to continuous learning and
+                    mastery of cutting-edge technologies. By completing intensive coursework and practical projects, the
+                    recipient has demonstrated a solid foundation in programming languages, web development, and
+                    collaborative software engineering, preparing them for future challenges in the tech industry.".</p>
+            </div>
+
+            <script>
+                document.querySelectorAll('.card-body').forEach(function (card) {
+                    card.addEventListener('click', function () {
+                        var targetPopup = card.getAttribute('data-target');
+                        document.getElementById(targetPopup).style.display = 'block';
+                        document.getElementById('overlay').style.display = 'block';
+                    });
+                });
+
+                function closePopup(popupId) {
+                    document.getElementById(popupId).style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                }
+
+                document.getElementById('overlay').addEventListener('click', function () {
+                    document.querySelectorAll('.popup').forEach(function (popup) {
+                        popup.style.display = 'none';
+                    });
+                    document.getElementById('overlay').style.display = 'none';
+                });
+            </script>
+        </section>
+
+        <section id="contact" class="my-5">
+            <div class="contact-section">
+                <h1>Contact Me</h1>
+                <p>If you have any questions or want to reach out, please click the links below to send me an email or
+                    call me:</p>
+                <a href="mailto:pandeypriyanshu53@gmail.com" class="contact-link">Send Email</a>
+                <a href="tel:9313686893" class="contact-link">Call Me: 9313686893</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 My Resume</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts.js"></script>
+
+
+
+</body>
+
+</html>
